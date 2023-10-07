@@ -2,13 +2,13 @@ import InsightRoll from "@/src/components/About/InsightRoll";
 
 
 const insights = [
-    "20+ Projects Completed",
-    "3+ Years of Freelancing",
-    "99% Client Satisfaction",
-    "20K+ Subscribers",
-    "Authored In-Depth Course on Educative",
-    "Contributed as a Technical Course Reviewer 📝",
-    "Recipient of the Hackernoon Noonies Award 🏆",
+    "my name is Prayitno",
+    "nim: 8020220066",
+    "student of UNAMA University",
+    "19th Years old",
+    "3 years experience in programming",
+    "participate in the competition of BPJS healthkaton2.0 Capture the flag 📝",
+    "received various awards after 19 years of studying 🏆",
   ];
 
 export default function AboutLayout({ children }) {
