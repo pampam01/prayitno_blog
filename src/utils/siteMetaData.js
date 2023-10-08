@@ -6,9 +6,9 @@ const siteMetadata = {
     description: 'A blog created with Next.js, Tailwind.css and contentlayer.',
     language: 'en-us',
     theme: 'system', // system, dark or light
-    siteUrl: 'https://create-blog-with-nextjs.vercel.app', // your website URL
+    siteUrl: 'https://prayitno-blog.vercel.app/', // your website URL
     siteLogo: '/next.svg',
-    socialBanner: '/social-banner.png', // add social banner in the public folder
+    socialBanner: '/walpaper.png', // add social banner in the public folder
     email: 'emailhpwiko@gmail.com', 
     github: 'https://github.com/pampam01',
     twitter: 'https://twitter.com',
