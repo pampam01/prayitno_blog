@@ -1,0 +1,72 @@
+---
+title: "Apa Itu Distributes Pocessing?. "
+description: "mengenal lebih dalam tentang distribute processing ."
+image: "../../public/blogs/tugas2/distributedProcessing/distribute.jpg"
+publishedAt: "2022-10-14"
+updatedAt: "2022-10-14"
+author: "Prayitno"
+isPublished: true
+tags:
+
+- tugas 2
+---
+
+Secara sederhana, dapat dipahami bahwa distributed processing adalah berbagai sistem komputer yang melibatkan lebih dari satu komputer (atau terkadang prosesor) untuk menjalankan suatu aplikasi. Tidak hanya itu, suatu sistem yang melibatkan penggunaan komputer tunggal dengan beberapa CPU sekaligus untuk menjalankan program (sistem paralel), juga masuk dalam distributed processing ini.
+<Image
+  src="/blogs/tugas2/distributedProcessing/distributeCover.jpg"
+  width="718"
+  height="404"
+  alt="Image"
+  sizes="100vw"
+/>
+
+> Distributed processing merupakan suatu tugas komputasi yang sangat kompleks. Tugas tersebut dibagi ke beberapa jaringan mesin individu, yang kemudian menyelesaikan bagiannya masing-masing. Setelah bagian tugas selesai, akan langsung dikirimkan kembali untuk dikompilasi menjadi satu output yang utuh.
+
+## PENTINGNYA DISTRIBUTED PROCESS UNTUK BISNIS 
+Sebenarnya, distributed processing adalah suatu hal yang dekat dengan kehidupan. Ada banyak sekali aktivitas yang melibatkan sistem komputer ini. Salah satunya adalah saat Anda menggunakan layanan cloud. Sebab, semua yang berjalan di cloud menggunakan jaringan yang melibatkan beberapa prosesor sekaligus.
+
+Contoh lainya adalah proses data mining pada big data, online game yang melibatkan beberapa orang sekaligus (MMO), hingga komunitas virtual di dunia maya. Penerapan distributed processing juga tidak selalu mengandalkan jaringan internet, tapi juga beberapa prosesor lokal yang disatukan. Hal ini banyak digunakan oleh para video editor dan animator untuk proses render. Tanpa melakukan distributed processing, proses render akan berjalan lama.
+
+## MENGAPA DISTRIBUTED PROCESS DIGUNAKAN?
+Ada banyak sekali keuntungan yang bisa didapatkan dengan menerapkan distributed processing, di antaranya:
+
+1. **Ketersediaan yang lebih baik.**.
+Sistem komputer monolitik (hanya menggunakan satu prosesor) memiliki keterbatasan dalam menjalankan suatu proses. Hasilnya, performa komputer menjadi sangat lambat. Jika Anda menjalankan satu sistem saja, mungkin masih dapat ditoleransi. Namun, bagaimana jika harus menjalankan beberapa sistem sekaligus dalam satu waktu? Distributed processing membagi operasional sistem tersebut ke beberapa server. Dengan begitu, titik kegagalan tidak hanya terpusat pada satu server. Sistem ini juga menyembunyikan TTR (time-to-recovery) yang durasinya terlalu panjang. Menariknya lagi, sistem terdistribusi juga dapat ditempatkan dekat dengan pengguna yang membutuhkan. 
+
+2. **_ketahanan tinggi_ :**
+Untuk beberapa proses yang sederhana, sistem monolitik saja mungkin sudah cukup. Namun, bagaimana dengan proses yang rumit dan melibatkan banyak pengguna? Kenyataannya, mayoritas proses yang berjalan saat ini terbilang rumit dan sangat menuntut ketahanan tinggi. Sistem penyimpanan terdistribusi terus-menerus membuat banyak salinan dari sepotong data, hingga menghasilkan fleksibilitas biaya, waktu pemulihan, dan bahkan daya tahan. Sistem ini juga dapat didesain agar tahan terhadap risiko yang berkorelasi, sekaligus menghindari korelasi secara langsung.
+
+3. **_Skalabilitas_ :**
+Distributed processing juga merupakan suatu sistem yang fleksibel dari segi skala. Untuk mengembangkannya pun sangat mudah, Anda cukup menambahkan prosesor sesuai kebutuhan. Hal ini mungkin terjadi karena sistem terdistribusi ini masuk dalam kategori stateless. Sistem stateless jauh lebih mudah diskalakan jika dibandingkan dengan sistem dengan state. Sebab, pada state system, Anda perlu menentukan bagaimana penyebarannya. Anda juga harus mencari cara untuk mengirim pengguna ke tempat yang tepat.
+
+## Kelebihan dan Kelemahan Distributed Processing 
+### Kelebihan
+1. **Andal:**
+Apabila dibandingkan dengan sistem komputasi tunggal atau monolitik, distributed processing jauh lebih andal saat menghadapi gangguan. Bahkan saat satu node bermasalah hingga tidak dapat berfungsi, node pada komputer lain tidak akan terpengaruh. Itu artinya, jaringan bisa tetap beroperasi meski terdapat masalah pada satu node.
+
+2. **Hemat Biaya:**
+Jika dilihat dari segi operasional dan umur pemakaian, sistem komputasi terdistribusi bisa dibilang hemat biaya. Pasalnya, Anda tidak perlu lagi menghabiskan banyak waktu untuk menjalankan satu program. Selain itu, sistem ini juga andal sehingga umur pemakaiannya pun lebih panjang.
+
+3. **Skalabilitas:**
+Distributed processing didesain untuk dapat diskalakan dengan mudah. Apabila sistem perlu meningkatkan workload, pengguna tinggal menambahkan lebih banyak workstation komputer. Anda bahkan tidak harus melakukan update sistem. Selain itu, sistem komputasi terdistribusi juga tidak membatasi jumlah mesin. Anda terus bisa menambahkan mesin sesuai kebutuhan.
+
+4. **Latensi rendah:**
+Menjalankan program dengan distributed processing menghasilkan latensi yang tergolong rendah. Jika suatu node diletakkan lebih dekat dengan pengguna, maka sistem secara otomatis akan memastikan bahwa keseluruhan jaringan dapat menerima traffic dari node tersebut. Jadi, waktu yang dibutuhkan pengguna akan jauh lebih singkat.
+
+### Kelemahan
+1. **Biaya implementasi mahal:**
+Untuk implementasi distributed processing, Anda akan membutuhkan banyak komputer. Hal ini tentu akan memerlukan lebih banyak biaya jika dibanding sistem monolitik. Belum lagi, penggunaan mesin yang terlalu banyak juga berarti Anda harus menyediakan lebih banyak ruang.
+
+2. **Keamanan:**
+Tantangan lain yang harus dihadapi oleh distributed processing adalah keamanan. Sebab, sistem ini memiliki karakteristik yang cenderung terbuka. Data penggunanya pun disimpan dalam workstation yang berbeda-beda. Itu berarti, pengguna harus terus memastikan bahwa data mereka tersimpan dengan aman dalam tiap komputer. Terlebih, sistem yang terdistribusi berarti akses data bisa menjadi celah keamanan.
+
+3. **Overhead:**
+Overheading sebenarnya merupakan permasalahan yang sangat umum pada sistem terdistribusi. Masalah ini biasanya akan muncul saat seluruh komputer mencoba beroperasi pada satu waktu. Secara teknis, hal ini memang akan mempercepat jalannya program. Namun, waktu komputasi pun akan ikut naik hingga berdampak pada waktu respons sistem.
+
+4. **Risiko kesalahan jaringan:**
+Sistem ini sangat rentan terhadap risiko kesalahan jaringan. Padahal, jika terjadi kesalahan jaringan, maka sistem pun akan mengalami gangguan komunikasi. Akibatnya, informasi pun gagal disampaikan (atau kadang muncul dengan urutan yang salah). Belum lagi troubleshooting pun memerlukan waktu tambahan karena data didistribusikan ke seluruh node yang ada dalam jaringan.
+
+## Referensi 
+- [muhammadmiftahpratama.blogspot.com](https://muhammadmiftahpratama.blogspot.com/p/pengertian-distributedprocessing.html)
+- [blog.algorit.ma](https://blog.algorit.ma/kelebihan-kelemahan-distributed-processing/)
+- [algorit.ma](https://algorit.ma/blog/distributed-processing-2022/)

@@ -1,0 +1,121 @@
+---
+title: "Thread Dalam Sistem Operasi. "
+description: "mengenal lebih dalam tentang thread dalam sistem operasi ."
+image: "../../public/blogs/tugas2/thread/thread.png"
+publishedAt: "2022-10-14"
+updatedAt: "2022-10-14"
+author: "Prayitno"
+isPublished: true
+tags:
+
+- tugas 2
+---
+
+# Thread
+
+ Thread adalah sebuah status eksekusi (running, ready, dll.), yang sering disebut sebagai lightweight process. Thread merupakan unit dasar dari penggunaan CPU, yang terdiri dari thread_id, program counter, register set, dan stack. Sebuah thread berbagi code section, data section, dan sumber daya sistem operasi dengan thread lain yang dimiliki oleh proses yang sama.
+
+## Jenis-Jenis Thread
+
+### Single-threading
+Dalam single-threading, sebuah proses tradisional atau heavyweight process memiliki thread tunggal yang berfungsi sebagai pengendali. Ini berarti hanya satu tugas dapat dieksekusi pada satu waktu.
+
+### Multi-threading
+Multi-threading adalah ketika sebuah proses memiliki banyak thread yang mengerjakan lebih dari satu tugas pada satu satuan waktu. Ini memungkinkan beberapa tugas untuk berjalan secara bersamaan.
+
+
+<Image
+  src="/blogs/tugas2/thread/thread1.webp"
+  width="718"
+  height="404"
+  alt="Image"
+  sizes="100vw"
+/>
+
+## Proses Thread dalam Sistem Operasi
+
+Sistem operasi mendukung proses multithreading, dan setiap sistem operasi memiliki konsep tersendiri dalam pengimplementasiannya. Ada dua tipe utama dari thread:
+
+1. **Thread Pengguna**: Thread pengguna adalah thread yang pengaturannya dilakukan oleh pustaka thread pada tingkatan pengguna. Mereka cepat dibuat dan dikendalikan. Thread pengguna biasanya tidak memerlukan campur tangan kernel dan bisa berjalan dengan cepat.
+
+2. **Thread Kernel**: Thread kernel didukung langsung oleh kernel. Mereka memerlukan campur tangan sistem operasi dan bisa lebih lambat dalam pembuatan dan penjadwalan.
+
+<Image
+  src="/blogs/tugas2/thread/thread2.webp"
+  width="718"
+  height="404"
+  alt="Image"
+  sizes="100vw"
+/>
+
+
+
+## Model MultiThreading
+
+Ada beberapa model multithreading yang umum digunakan:
+
+1. **Model Many-to-One**: Model ini memetakan beberapa thread tingkatan pengguna ke sebuah thread tingkatan kernel. Hanya satu thread pengguna yang dapat mengakses thread kernel pada satu saat. Kekurangannya adalah ketika ada satu blocking system call, semua akan menjadi terblokir.
+
+<Image
+  src="/blogs/tugas2/thread/thread3.webp"
+  width="718"
+  height="404"
+  alt="Image"
+  sizes="100vw"
+/>
+
+2. **Model One-to-One**: Model ini memetakan setiap thread tingkatan pengguna ke setiap thread tingkatan kernel. Ini menyediakan lebih banyak concurrency dibandingkan dengan model Many-to-One, tetapi setiap pembuatan thread pengguna memerlukan tambahan thread kernel.
+
+<Image
+  src="/blogs/tugas2/thread/thread4.webp"
+  width="718"
+  height="404"
+  alt="Image"
+  sizes="100vw"
+/>
+
+3. **Model Many-to-Many**: Model ini memetakan banyak thread tingkatan pengguna ke thread kernel yang jumlahnya sedikit atau sama dengan tingkatan pengguna. Ini memungkinkan thread untuk berjalan secara paralel pada multiprosesor.
+
+<Image
+  src="/blogs/tugas2/thread/thread5.webp"
+  width="718"
+  height="404"
+  alt="Image"
+  sizes="100vw"
+/>
+
+## Pustaka Thread
+
+Pustaka thread atau Thread Library menyediakan API untuk programmer dalam menciptakan dan mengelola thread. Ada dua cara dalam mengimplementasikan pustaka thread:
+
+1. Menyediakan API dalam level pengguna tanpa dukungan dari kernel, yang memungkinkan pemanggilan fungsi lokal tanpa system call.
+
+2. Menyediakan API di level kernel yang didukung secara langsung oleh sistem operasi. Pemanggilan fungsi akan melibatkan system call ke kernel. Contoh pustaka thread yang sering digunakan adalah POSIX Pthreads, Java, dan Win32.
+
+## Thread Cancellation
+
+Thread cancellation adalah pembatalan thread sebelum tugasnya selesai. Hal ini berguna dalam situasi seperti mematikan JVM pada program Java atau ketika suatu thread telah menemukan hasil yang dibutuhkan dan thread lainnya dapat dibatalkan.
+
+Pemberhentian target thread dapat dilakukan dengan dua cara:
+
+1. Asynchronous cancellation, di mana suatu thread seketika itu juga membatalkan target thread.
+2. Deferred cancellation, di mana suatu thread secara periodik memeriksa apakah ia harus dibatalkan atau tidak.
+
+## Thread Pools
+
+Thread Pools adalah sekumpulan thread yang menunggu untuk mengerjakan tugas. Mereka digunakan untuk mengatasi masalah pembuatan thread yang terlalu sering dan untuk meningkatkan performa sistem. Ketika server menerima permintaan, ia akan mengambil thread dari pool jika tersedia, jika tidak, server akan menunggu sampai ada thread yang tersedia.
+
+## Penjadwalan Thread
+
+Thread dapat dijadwalkan dengan berbagai metode penjadwalan. Kebijakan penjadwalan menentukan bagaimana thread diatur dalam daftar proses sesuai prioritas. Ada dua jenis umum penjadwalan:
+
+1. **Process Contention Scope (PCS)**: Pustaka thread menjadwalkan thread pengguna untuk berjalan pada LWP (lightweight process) yang tersedia. Pengaturan thread dilakukan dalam ruang pengguna sehingga efisien.
+
+2. **System Contention Scope (SCS)**: SCS berfungsi untuk memilih satu dari banyak thread pengguna dan menjadwalkannya ke thread kernel. Ini memberikan lebih banyak concurrency dibandingkan dengan PCS, tetapi memerlukan lebih banyak sumber daya.
+
+Ini adalah penjelasan umum tentang thread dalam sistem operasi.
+
+## Referensi 
+- [scos.binus.ac.id](https://socs.binus.ac.id/2020/12/13/thread-unit-pemanfaatan-cpu/)
+- [byjus.com](https://byjus.com/gate/what-is-thread-in-operating-system-notes/)
+- [scaler.com](https://www.scaler.com/topics/operating-system/threads-in-operating-system/)
